@@ -7,12 +7,13 @@ import "bootstrap/dist/css/bootstrap.min.css"
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<!-- PUBLIC / + NOMBRE -->
+		<link rel="shortcut icon" href="/usuario.png">
 		<meta name="generator" content={Astro.generator} />	
-		<title>Astro Basics</title>
+		<title>CV</title>
 	</head>
 	<body>
-		<h1>Alan Aldair Chávez Hernández</h1>
+		
 		<slot />
 	</body>
 </html>
@@ -20,23 +21,10 @@ import "bootstrap/dist/css/bootstrap.min.css"
 <style>
 	html,
 	body {
+		background: #CAFAFB
 		margin: 0;
 		width: 100%;
 		height: 100%;
-		background-color: aquamarine;
+		background-color: lightblue;
 	}
-
-	.cv{
-		background: white;
-		border: 3px solid black;
-		margin-top: 40px;
-		height: auto;
-		max-width: 1300px;
-	}
-
-	hr{
-    border-top: 5px solid black;
-    width: 50%;
-    margin: 0 auto;
-}
 </style>
