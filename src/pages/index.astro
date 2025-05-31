@@ -21,24 +21,30 @@ import Layout from '../layouts/Layout.astro';
   <div class="container">
     <!-- Columna izquierda -->
     <div class="left">
-      <img src="foto.jpg" alt="Foto de perfil" class="profile-img">
-      <h2>Juan Pérez</h2>
-      <p><strong>Puesto deseado</strong></p>
-      <p>📧 juan.perez@email.com</p>
-      <p>📞 +52 55 1234 5678</p>
-      <p>📍 Ciudad de México, México</p>
-      <p>🔗 linkedin.com/in/juanperez</p>
+      <img src="usuario.png" class="img-yo">
+      <h2>Aldair Chávez</h2>
+      <p><strong>BECARIO PROGRMADOR JR</strong></p>
+      <p>📧 chavezaldair01@gmail.com</p>
+      <p>📞 +52 5614965402</p>
+      <p>📍 Zumpango,Estado. de México</p>
+      <p>🔗 linkedin.com/in/aldairdev</p>
 
       <h2>PERFIL</h2>
-      <p>Profesional proactivo con más de 5 años de experiencia en el desarrollo de soluciones
-		 web para empresas privadas e instituciones públicas. Reconocido por la calidad de su 
-		 trabajo y compromiso con la mejora continua.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum autem sit neque a dolor 
+        veritatis quod iste nisi, necessitatibus magnam quidem aspernatur facilis distinctio 
+        deserunt non quis nam unde culpa.</p>
 
       <h2>HABILIDADES</h2>
       <ul>
         <li>Comunicación efectiva</li>
+        <li>Liderazgo</li>
+        <li>Creatividad</li>
+        <li>Desarrollo Web</li>
+        <li>Java</li>
         <li>Python</li>
+        <li>PHP</li>
         <li>JavaScript</li>
+        <li>SQL</li>
         <li>Hablar en público</li>
       </ul>
 
@@ -46,7 +52,6 @@ import Layout from '../layouts/Layout.astro';
       <ul>
         <li>Español: nativo</li>
         <li>Inglés: intermedio</li>
-        <li>Francés: básico</li>
       </ul>
     </div>
 
@@ -54,41 +59,25 @@ import Layout from '../layouts/Layout.astro';
     <div class="right">
       <h2>EXPERIENCIA LABORAL</h2>
 
-      <div class="job-title">Desarrollador Web – Empresa Ejemplo</div>
-      <div class="job-period">2023 - Actualidad</div>
+      <div class="trabajo">Dpto. Logística - CORPORATIVO PYCESA</div>
+      <div class="periodo">2024 - Actualidad</div>
       <ul>
-        <li>Desarrollar código limpio y mantenible.</li>
-        <li>Monitorear el rendimiento de aplicaciones web.</li>
+        <li>Manejo de requisiciones</li>
+        <li>Monitorear el rendimiento de personal</li>
         <li>Apoyar en temas de seguridad de sistemas.</li>
       </ul>
 
-      <div class="job-title">Desarrollador Web – Otra Empresa</div>
-      <div class="job-period">2020 - 2023</div>
+      <div class="trabajo">Desarrollador Web – EJEMPLO</div>
+      <div class="periodo">2020 - 2023</div>
       <ul>
         <li>Liderar la comunidad técnica en línea.</li>
-        <li>Organizar eventos y conferencias para desarrolladores.</li>
-      </ul>
-
-      <div class="job-title">Administrador de Bases de Datos – Empresa</div>
-      <div class="job-period">2019 - 2020</div>
-      <ul>
-        <li>Colaborar con equipos técnicos para mejorar el uso de bases de datos.</li>
       </ul>
 
       <h2>EDUCACIÓN</h2>
-      <p><strong>Maestría en Desarrollo Web</strong> – Universidad de X (2011 – 2013)</p>
-      <p><strong>Ingeniería en Sistemas Computacionales</strong> – Universidad Y (2007 – 2010)</p>
-
-      <h2>REFERENCIAS</h2>
-      <p><strong>Laura García</strong> – Directora<br>
-        Empresa Textil S.A. de C.V.<br>
-        Tel: +52 55 9876 5432<br>
-        Correo: laura.garcia@email.com</p>
-
-      <p><strong>Carlos Martínez</strong> – Jefe de Recursos Humanos<br>
-        Editorial Ejemplo<br>
-        Tel: +52 55 2345 6789<br>
-        Correo: carlos.martinez@email.com</p>
+      <p><strong>Lic. Informática Administrativa</strong> – CUUT (2024 – Actualidad)</p>
+      <p><strong>TSU Desarrollo de Software Multiplataforma</strong> – UTTEC (2021 – 2024)</p>
+      <p><strong>Técnico en Programación</strong> – CECYTEM (2016 – 2019)</p>
+      </p>
     </div>
   </div>
 </body>
@@ -118,14 +107,14 @@ import Layout from '../layouts/Layout.astro';
 
     .left {
       width: 35%;
-      background: #e6f0ff; /* azul claro */
+      background: #e6f0ff; 
     }
 
     .right {
       width: 65%;
     }
 
-    .profile-img {
+    .img-yo {
       width: 100%;
       border-radius: 8px;
     }
@@ -145,12 +134,12 @@ import Layout from '../layouts/Layout.astro';
       padding-left: 20px;
     }
 
-    .job-title {
+    .trabajo {
       font-weight: bold;
       margin-top: 10px;
     }
 
-    .job-period {
+    .periodo {
       color: #007BFF;
     }
   </style>
