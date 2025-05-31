@@ -1,0 +1,23 @@
+---
+//Constantes, COMP
+const {nombre, periodo, actividades} = Astro.props;
+---
+
+<div class="trabajo">{nombre}</div>
+      <div class="periodo">{periodo}</div>
+      <ul>
+        <li>Manejo de requisiciones</li>
+        <li>Monitorear el rendimiento de personal</li>
+        <li>Apoyar en temas de seguridad de sistemas.</li>
+      </ul>
+
+<style>
+    .trabajo {
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .periodo {
+      color: #007BFF;
+    }
+</style>

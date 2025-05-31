@@ -1,5 +1,6 @@
 ---
 //import Welcome from '../components/Welcome.astro';
+import Trabajo from '../components/Trabajo.astro';
 import Layout from '../layouts/Layout.astro';
 
 //CREAR CV EN INDEX
@@ -52,19 +53,11 @@ import Layout from '../layouts/Layout.astro';
     <div class="right">
       <h2>EXPERIENCIA LABORAL</h2>
 
-      <div class="trabajo">Dpto. Logística - CORPORATIVO PYCESA</div>
-      <div class="periodo">2024 - Actualidad</div>
-      <ul>
-        <li>Manejo de requisiciones</li>
-        <li>Monitorear el rendimiento de personal</li>
-        <li>Apoyar en temas de seguridad de sistemas.</li>
-      </ul>
+      <Trabajo nombre="CORPORATIVO PYCESA" periodo="2024 - ACTUALIDAD"></Trabajo>
 
-      <div class="trabajo">Desarrollador Web – EJEMPLO</div>
-      <div class="periodo">2020 - 2023</div>
-      <ul>
-        <li>Liderar la comunidad técnica en línea.</li>
-      </ul>
+      <Trabajo nombre="DESARROLLADOR WEB" periodo="2020 - 2023"></Trabajo>
+
+      <Trabajo nombre="ASISTENTE DE KEMONITO" periodo="2018 - 2019"></Trabajo>
 
       <h2>EDUCACIÓN</h2>
       <p><strong>Lic. Informática Administrativa</strong> – CUUT (2024 – Actualidad)</p>
@@ -77,7 +70,7 @@ import Layout from '../layouts/Layout.astro';
 </Layout>
 
   <style>
-    
+
     .container {
       display: flex;
       max-width: 1000px;
