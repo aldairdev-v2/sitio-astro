@@ -6,15 +6,18 @@ const {nombre, periodo, actividades} = Astro.props;
 <div class="trabajo">{nombre}</div>
       <div class="periodo">{periodo}</div>
       <ul>
-        <li>Manejo de requisiciones</li>
-        <li>Monitorear el rendimiento de personal</li>
-        <li>Apoyar en temas de seguridad de sistemas.</li>
+        {actividades.map((actividad) => (
+          <li>{actividad}</li>
+        ))}
       </ul>
 
 <style>
     .trabajo {
       font-weight: bold;
       margin-top: 10px;
+      border-left: 4px solid #007BFF;
+      padding-left: 8px;
+      margin-bottom: 15px;
     }
 
     .periodo {

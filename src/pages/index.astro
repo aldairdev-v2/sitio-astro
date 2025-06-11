@@ -7,6 +7,35 @@ import Layout from '../layouts/Layout.astro';
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+
+const mis_trabajos = [
+  {
+    nombre: "Corporativo PYCESA",
+    periodo: "Febrero 2024 - Actualidad",
+    actividades: [
+      "Revisar remisiones",
+      "Reportar avances"
+    ]
+  },
+  {
+    nombre: "Prácticas UTTEC",
+    periodo: "Agosto 2021 - Diciembre 2023",
+    actividades: [
+      "Desarrollo web con PHP",
+      "Diseño e implementación de BD",
+      "Documentación técnica"
+    ]
+  },
+  {
+    nombre: "Dios TODOPODEROSO",
+    periodo: "año 1 - 2001",
+    actividades: [
+      "Hacer de todo un poco",
+      "Crear las lenguas romances",
+      "Morir por la causa"
+    ]
+  }
+];
 ---
 
 
@@ -53,11 +82,12 @@ import Layout from '../layouts/Layout.astro';
     <div class="right">
       <h2>EXPERIENCIA LABORAL</h2>
 
-      <Trabajo nombre="CORPORATIVO PYCESA" periodo="2024 - ACTUALIDAD"></Trabajo>
-
-      <Trabajo nombre="DESARROLLADOR WEB" periodo="2020 - 2023"></Trabajo>
-
-      <Trabajo nombre="ASISTENTE DE KEMONITO" periodo="2018 - 2019"></Trabajo>
+      { mis_trabajos.map(trabajo => {
+        return (
+          <Trabajo nombre={trabajo.nombre} periodo={trabajo.periodo} actividades={trabajo.actividades} />
+        )
+      })
+      }
 
       <h2>EDUCACIÓN</h2>
       <p><strong>Lic. Informática Administrativa</strong> – CUUT (2024 – Actualidad)</p>
