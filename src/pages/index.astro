@@ -1,7 +1,9 @@
 ---
 //import Welcome from '../components/Welcome.astro';
 //IMPORT COMPONENTS
+import Contacto from '../components/Contacto.astro';
 import Educacion from '../components/Educacion.astro';
+import Habilidades from '../components/Habilidades.astro';
 import Trabajo from '../components/Trabajo.astro';
 import Layout from '../layouts/Layout.astro';
 
@@ -9,6 +11,45 @@ import Layout from '../layouts/Layout.astro';
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+
+//HABILIDADES.astro
+const mis_habilidades = [
+  {
+    habilidad:"Desarrollo Web"
+  },
+  {
+    habilidad:"Java"
+  },
+  {
+    habilidad:"Python"
+  },
+  {
+    habilidad:"PHP"
+  },
+  {
+    habilidad:"JavaScript"
+  },
+  {
+    habilidad:"SQL"
+  },
+]
+
+//CONTACTO.astro
+const mi_info = [
+  {
+    dato:"📧 chavezaldair01@gmail.com"
+  },
+  {
+    dato:"📞 +52 5614965402"
+  },
+  {
+    dato:"📍 Zumpango,Estado. de México"
+  },
+  {
+    dato:"🔗 linkedin.com/in/aldairdev"
+  }
+]
+
 //EDUCACION.astro
 const formacion = [
   {
@@ -24,7 +65,6 @@ const formacion = [
     escuela:" - CECYTEM (2016 - 2019)"
   }
 ]
-
 
 //TRABAJO.astro
 const mis_trabajos = [
@@ -57,19 +97,22 @@ const mis_trabajos = [
 ];
 ---
 
-
 <Layout>
 
   <div class="container">
     <!-- Columna izquierda -->
     <div class="left">
       <img src="usuario.png" class="img-yo">
-      <h2>Aldair Chávez</h2>
+
+      <h2>Alan Aldair Chávez Hernández</h2>
       <p><strong>BECARIO PROGRMADOR JR</strong></p>
-      <p>📧 chavezaldair01@gmail.com</p>
-      <p>📞 +52 5614965402</p>
-      <p>📍 Zumpango,Estado. de México</p>
-      <p>🔗 linkedin.com/in/aldairdev</p>
+
+      { mi_info.map(contacto => {
+        return (
+          <Contacto datos={contacto.dato} />
+        )
+      })
+      }
 
       <h2>PERFIL</h2>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum autem sit neque a dolor 
@@ -77,16 +120,19 @@ const mis_trabajos = [
         deserunt non quis nam unde culpa.</p>
 
       <h2>HABILIDADES</h2>
+      <p><strong>Técnicas</strong></p>
+
+      { mis_habilidades.map(hab => {
+        return (
+          <Habilidades habilidad={hab.habilidad} />
+        )
+      })}
+
+
       <ul>
         <li>Comunicación efectiva</li>
         <li>Liderazgo</li>
         <li>Creatividad</li>
-        <li>Desarrollo Web</li>
-        <li>Java</li>
-        <li>Python</li>
-        <li>PHP</li>
-        <li>JavaScript</li>
-        <li>SQL</li>
         <li>Hablar en público</li>
       </ul>
 
@@ -114,7 +160,8 @@ const mis_trabajos = [
         return (
           <Educacion carrera={educacion.carrera} escuela={educacion.escuela}/>
         )
-      })}
+      })
+      }
     </div>
   </div>
 	
