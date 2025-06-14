@@ -3,7 +3,6 @@
 //IMPORT COMPONENTS
 import Contacto from '../components/Contacto.astro';
 import Educacion from '../components/Educacion.astro';
-import Habilidades from '../components/Habilidades.astro';
 import Trabajo from '../components/Trabajo.astro';
 import Layout from '../layouts/Layout.astro';
 
@@ -13,26 +12,7 @@ import Layout from '../layouts/Layout.astro';
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 
 //HABILIDADES.astro
-const mis_habilidades = [
-  {
-    habilidad:"Desarrollo Web"
-  },
-  {
-    habilidad:"Java"
-  },
-  {
-    habilidad:"Python"
-  },
-  {
-    habilidad:"PHP"
-  },
-  {
-    habilidad:"JavaScript"
-  },
-  {
-    habilidad:"SQL"
-  },
-]
+const mis_habilidades = ["Desarrollo Web","Java","Python","PHP","JavaScript","SQL"]
 
 //CONTACTO.astro
 const mi_info = [
@@ -122,12 +102,13 @@ const mis_trabajos = [
       <h2>HABILIDADES</h2>
       <p><strong>Técnicas</strong></p>
 
+        <ul>
       { mis_habilidades.map(hab => {
         return (
-          <Habilidades habilidad={hab.habilidad} />
+          <li>{hab}</li>
         )
       })}
-
+        </ul>
 
       <ul>
         <li>Comunicación efectiva</li>
